@@ -1,3 +1,165 @@
-header img{
-    width: 80px;
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a & */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Ysabeau+Office:ital,wght@0,100;0,300;0,600;1,400&display=swap");
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #f4ffe5;
+  --secondary-color: #99cc00;
+  --accent1-color: #cc3366;
+  --accent2-color: #4b5555;
+  --accent3-color: #001d4a;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Pacifico", cursive;
+  --paragraph-font: "Ysabeau Office", sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #99cc00; /* headlines on a white background */
+  --headline-color-on-color: #f4ffe5; /* headlines on a colored background */
+  --paragraph-color-on-white: #4b5555; /* paragraph text on a white background */
+  --paragraph-color-on-color: #4b5555; /* paragraph text on a colored background */
+  --paragraph-background-color: #99cc00;
+  --nav-link-color: #4b5555;
+  --nav-background-color: #99cc00;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #cc3366;
+}
+
+/*----------------------BODY------------------------*/
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  /* padding: 4em; */
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--headline-color-on-color);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+
+/*---------------------HEADER-----------------------*/
+
+header,
+footer {
+  padding: 1em;
+  text-align: center;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+
+.fa {
+  padding: 10px 5px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #cb2027;
+  color: white;
+}
+
+header img,
+footer img {
+  width: 80px;
+}
+
+header nav button {
+  margin: 0.2rem 2vw;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #555;
+}
+
+header nav {
+  background-color: var(--headline-color-on-color);
+  width: 100%;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 0.8rem 2vw;
+  text-decoration: none;
+  color: #333;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li.active a {
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+header nav ul li a:hover {
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
+}
+
+header nav ul {
+  display: none;
+}
+
+header nav ul.open {
+  display: block;
+}
+
+#hamburgerBtn span:nth-child(1) {
+  display: block;
+}
+#hamburgerBtn span:nth-child(2) {
+  display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+  display: none;
+}
+#hamburgerBtn.open span:nth-child(2) {
+  display: block;
 }

@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/medium.css" />
     <link rel="stylesheet" href="styles/large.css" />
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
     <header>
@@ -19,16 +23,36 @@
         ><img src="images/bountiful_logo.webp" alt="Bountiful logo image."
       /></a>
       <h1>Bountiful foods</h1>
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
       <nav>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/about-us.html">About us</a></li>
+        <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+        <ul id="primaryNav">
+          <li class="active"><a href="/index.html">Home</a></li>
           <li><a href="/fresh.html">Fresh</a></li>
+          <li><a href="/about-us.html">About us</a></li>
         </ul>
       </nav>
-      
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <article>
+        <section>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a href="index.html"
+        ><img src="images/bountiful_logo.webp" alt="Bountiful logo image."
+      /></a>
+      <h3>Bountiful foods</h3>
+      <p>
+        &copy; <span id="currentYear"></span> &#128641; Yazel Richard Hipolito
+        Rudas &#128641; Utah
+      </p>
+      <p>Last Updated: <span id="lastUpdated"></span></p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
   </body>
 </html>
