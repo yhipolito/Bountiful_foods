@@ -27,6 +27,12 @@ Fonts are separated by a & */
   --nav-hover-background-color: #cc3366;
 }
 
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
 /*----------------------BODY------------------------*/
 
 body {
@@ -38,11 +44,6 @@ body {
   background-color: var(--headline-color-on-color);
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-}
 h1,
 h2,
 h3,
@@ -72,7 +73,7 @@ footer {
 }
 
 .fa {
-  padding: 10px 5px;
+  padding: 10px 4px;
   font-size: 30px;
   width: 30px;
   text-align: center;
@@ -162,4 +163,131 @@ header nav ul.open {
 }
 #hamburgerBtn.open span:nth-child(2) {
   display: block;
+}
+
+/*-------------------MAIN-----------------------*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: 1rem 0.5rem;
+}
+
+main div {
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  width: 96%;
+  margin: 0 auto;
+}
+
+main div h3 {
+  color: var(--headline-color-on-white);
+}
+
+main div.summary p {
+  padding: 1rem;
+}
+
+main div picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main div ul {
+  list-style-type: none;
+}
+
+/*----------------fresh.html----------------------*/
+/* form {
+  grid-column: 1/4;
+} */
+form fieldset {
+  margin: 1rem 0;
+  border: 1px solid var(--accent1-color);
+  border-radius: 10px;
+  padding: 0.5rem 2%;
+  font-size: 1rem;
+}
+
+form legend {
+  color: var(--accent1-color);
+  margin: 0 1rem;
+  padding: 0 0.5rem;
+}
+
+form label.top,
+form div {
+  display: block;
+  padding-top: 1rem;
+  color: var(--accent1-color);
+  font-size: 0.8rem;
+  border: none;
+  background-color: var(--headline-color-on-color);
+  text-align: left;
+}
+
+form label.top input,
+form label.top textarea,
+form label.top select {
+  display: block;
+  font-size: 1rem;
+  border: solid 1px #999;
+  border-radius: 4px;
+  padding: 0.75rem;
+  color: #555;
+  width: 90%;
+  max-width: 20rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* form label.sbs {
+  display: block;
+  padding: 0.75rem 0;
+  color: #555;
+} */
+
+form input.submitBtn {
+  border: none;
+  background-color: var(--accent1-color);
+  color: var(--headline-color-on-color);
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0 2rem 2%;
+  width: 96%;
+  max-width: 20rem;
+}
+
+form label.top input:required {
+  border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+  border-left: green solid 6px;
+}
+
+form span {
+  display: none;
+}
+/*--------------------------About-us-------------------*/
+
+div.contact-us {
+    text-align: left;
+}
+div.contact-us h3, div.contact-us a {
+    margin-left: 1rem;
+}
+
+div.contact-us iframe {
+    display: block;
+    margin: 2rem auto;
+}
+
+div.about-us h2, div.contact-us h2{
+    color: var(--headline-color-on-white);
+}
+
+div.about-us p, div.contact-us p{
+    padding: 0 1rem;
 }
