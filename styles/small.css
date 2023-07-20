@@ -52,8 +52,8 @@ h5,
 h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-color);
-  size: .6rem;
-  margin: 0 0 0 .6rem;
+  /* resize: 0.6rem; */
+  margin: 0 0 0 0.6rem;
 }
 h2 {
   text-align: center;
@@ -77,14 +77,14 @@ footer {
 }
 
 header div.logo {
-    display: flex;
-    align-items: center;
-    margin-top: .6rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.6rem;
 }
 
-header div.social{
-    text-align: left;
-    margin: .8rem 0;
+header div.social {
+  text-align: left;
+  margin: 0.8rem 0;
 }
 
 .fa {
@@ -218,7 +218,7 @@ main div ul {
 }
 
 main div ul li {
-    text-align: center;
+  text-align: center;
 }
 
 /*----------------fresh.html----------------------*/
@@ -296,25 +296,27 @@ form span {
 /*--------------------------About-us-------------------*/
 
 div.contact-us {
-    text-align: left;
+  text-align: left;
 }
 div.contact-us h3 {
-    margin: 1rem 1rem;
+  margin: 1rem 1rem;
 }
 div.contact-us a {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 div.contact-us iframe {
-    display: block;
-    margin: 1rem auto;
-    width: 98%;
+  display: block;
+  margin: 1rem auto;
+  width: 98%;
 }
 
-div.about-us h2, div.contact-us h2{
-    color: var(--headline-color-on-white);
+div.about-us h2,
+div.contact-us h2 {
+  color: var(--headline-color-on-white);
 }
 
-div.about-us p, div.contact-us p{
-    padding: 0 1rem;
-    margin: .8rem 0;
+div.about-us p,
+div.contact-us p {
+  padding: 0 1rem;
+  margin: 0.8rem 0;
 }
