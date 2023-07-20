@@ -19,14 +19,18 @@
   </head>
   <body>
     <header>
-      <a href="index.html"
-        ><img src="images/bountiful_logo.webp" alt="Bountiful logo image."
-      /></a>
-      <h1>Bountiful foods</h1>
-            <!-- Add font awesome icons -->
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="images/bountiful_logo.webp" alt="Bountiful logo image."
+        /></a>
+        <h1>Bountiful foods</h1>
+      </div>
+      <div class="social">
+        <!-- Add font awesome icons -->
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
       <nav>
         <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
         <ul id="primaryNav">
@@ -39,14 +43,35 @@
     <main>
       <div class="hero">
         <picture class="heropicture">
-          <source srcset="images/placeholder800x600.png" media="(min-width:1028px)" />
-          <source srcset="images/placeholder500x375.png" media="(min-width:560px)" />
-          <img src="images/placeholder200x150.png" alt="This is a small hero image" />
+          <source
+            srcset="images/placeholder800x600.png"
+            media="(min-width:1028px)" />
+          <source
+            srcset="images/placeholder500x375.png"
+            media="(min-width:560px)" />
+          <img
+            src="images/placeholder200x150.png"
+            alt="This is a small hero image" />
         </picture>
       </div>
       <div class="summary">
         <h3>Summary</h3>
-        <p>The southern coastal area of california covers 6 counties; San Diego, San Bernardino, Los Angeles, Orange, Ventura, and Riverside. This area is considered the southest American Vinicultural Area AVA. Therefore, has one of the biggest areas with vineyards. Our more than 3000 acres make this area be on the spot for their different types of grapes variaties for the wine productions. Interestingly, the particular climate makes this area also great to produce veggetables and different kind of fruits with a great quality. <cite><a href="https://web.archive.org/web/20160310063028/http://wine.appellationamerica.com/">appellationamerica.com.(n.d.)</a></cite> </p>
+        <p>
+          The southern coastal area of california covers 6 counties; San Diego,
+          San Bernardino, Los Angeles, Orange, Ventura, and Riverside. This area
+          is considered the southest American Vinicultural Area AVA. Therefore,
+          has one of the biggest areas with vineyards. Our more than 3000 acres
+          make this area be on the spot for their different types of grapes
+          variaties for the wine productions. Interestingly, the particular
+          climate makes this area also great to produce veggetables and
+          different kind of fruits with a great quality.
+          <cite
+            ><a
+              href="https://web.archive.org/web/20160310063028/http://wine.appellationamerica.com/"
+              >appellationamerica.com.(n.d.)</a
+            ></cite
+          >
+        </p>
       </div>
       <div class="weather">
         <h3>Weather</h3>
@@ -56,18 +81,19 @@
           <p><span id="temperature"></span>&deg;F</p>
           <p>Humidity: <span id="humidity"></span>%</p>
           <figcaption id="description"></figcaption>
-          </figure>
-          <p><strong>3-day forecast</strong></p>
-          <ul id="day-list-forecast">
-            <li id="forecast1"></li>
-            <li id="forecast2"><span id="day-2"></span></li>
-            <li id="forecast3"><span id="day-3"></span></li>
-          </ul>
+        </figure>
+        <p><strong>3-day forecast</strong></p>
+        <ul id="day-list-forecast">
+          <li id="forecast1"></li>
+          <li id="forecast2"><span id="day-2"></span></li>
+          <li id="forecast3"><span id="day-3"></span></li>
+        </ul>
       </div>
       <div class="fresh">
         <h3>fresh</h3>
         <p>
-          If you would like to order <strong>your</strong> drink, click <a href="fresh.html">here</a>
+          If you would like to order <strong>your</strong> drink, click
+          <a href="fresh.html">here</a>
         </p>
       </div>
       <div class="drinks">

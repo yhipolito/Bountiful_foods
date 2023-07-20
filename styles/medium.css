@@ -1,0 +1,97 @@
+/* 35rem is also 560px when basefont is 16px*/
+@media only screen and (min-width: 35rem) {
+  header nav button {
+    display: none;
+  }
+  header div h1 {
+    font-size: 2.2rem;
+  }
+  header {
+    display: grid;
+    grid-column: 1fr 1fr;
+  }
+  div.logo,
+  div.social {
+    margin: 1rem 0;
+  }
+  .fa {
+    padding: 15px 12px;
+    justify-content: center;
+  }
+  header nav {
+    grid-column: 1/3;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  div.social {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 2% 0 0;
+  }
+
+  header nav ul#primaryNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  header nav ul li a {
+    border-top: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1rem auto;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    row-gap: 10px;
+  }
+  div.hero {
+    grid-column: 1/3;
+    margin-top: 1rem;
+  }
+  div.summary {
+    grid-column: 1/3;
+  }
+  div.fresh {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+  }
+  div.weather {
+    grid-column: 2/3;
+  }
+  div.drinks {
+    grid-column: 1/3;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  /*---------------FORM-------------------*/
+
+  form span {
+    display: inline;
+  }
+  form {
+    grid-column: 1/4;
+    margin: 1rem;
+  }
+  form fieldset legend {
+    margin-left: 1rem;
+  }
+
+  /*---------------FOOTER-------------------*/
+
+  /*----------------aboutUs--------------------*/
+  main {
+    font-size: 1.2rem;
+  }
+  .about-us,
+  .contact-us {
+    grid-column: 1/3;
+    margin: 1rem auto 0.5rem;
+  }
+}

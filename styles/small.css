@@ -52,15 +52,18 @@ h5,
 h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-color);
+  size: .6rem;
+  margin: 0 0 0 .6rem;
 }
 h2 {
   text-align: center;
+  margin: 1rem;
 }
-hr {
+/* hr {
   height: 3px;
   margin: 35px 0;
   background: var(--accent1-color);
-}
+} */
 
 /*---------------------HEADER-----------------------*/
 
@@ -70,6 +73,18 @@ footer {
   text-align: center;
   color: var(--paragraph-color-on-color);
   background-color: var(--paragraph-background-color);
+  position: relative;
+}
+
+header div.logo {
+    display: flex;
+    align-items: center;
+    margin-top: .6rem;
+}
+
+header div.social{
+    text-align: left;
+    margin: .8rem 0;
 }
 
 .fa {
@@ -103,20 +118,24 @@ footer {
 
 header img,
 footer img {
-  width: 80px;
+  width: 60px;
 }
 
 header nav button {
   margin: 0.2rem 2vw;
-  background: transparent;
+  background: var(--headline-color-on-color);
   border: none;
   font-size: 2rem;
   color: #555;
+  position: absolute;
+  top: 100px;
+  right: 2%;
 }
 
 header nav {
   background-color: var(--headline-color-on-color);
   width: 100%;
+  margin-top: 1rem;
 }
 
 header nav ul {
@@ -198,6 +217,10 @@ main div ul {
   list-style-type: none;
 }
 
+main div ul li {
+    text-align: center;
+}
+
 /*----------------fresh.html----------------------*/
 /* form {
   grid-column: 1/4;
@@ -238,8 +261,8 @@ form label.top select {
   color: #555;
   width: 90%;
   max-width: 20rem;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
+  background-color: white;
+  /* margin: 0 auto; */
 }
 
 /* form label.sbs {
@@ -254,7 +277,7 @@ form input.submitBtn {
   color: var(--headline-color-on-color);
   border-radius: 1rem;
   padding: 0.75rem 1.5rem;
-  margin: 0 0 2rem 2%;
+  margin: 0 0 2rem 0;
   width: 96%;
   max-width: 20rem;
 }
@@ -275,13 +298,16 @@ form span {
 div.contact-us {
     text-align: left;
 }
-div.contact-us h3, div.contact-us a {
+div.contact-us h3 {
+    margin: 1rem 1rem;
+}
+div.contact-us a {
     margin-left: 1rem;
 }
-
 div.contact-us iframe {
     display: block;
-    margin: 2rem auto;
+    margin: 1rem auto;
+    width: 98%;
 }
 
 div.about-us h2, div.contact-us h2{
@@ -290,4 +316,5 @@ div.about-us h2, div.contact-us h2{
 
 div.about-us p, div.contact-us p{
     padding: 0 1rem;
+    margin: .8rem 0;
 }

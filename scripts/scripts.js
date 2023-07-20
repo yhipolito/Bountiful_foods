@@ -6,26 +6,6 @@ document.querySelector("#currentYear").textContent = year;
 const lastUpdated = document.lastModified;
 document.querySelector("#lastUpdated").textContent = lastUpdated;
 
-//----------------date for forecast----------------//
-// Select the HTML element to manipulate
-// const date1 = document.querySelector("#day-1");
-// const message = document.querySelector("#emessage");
-
-// // Try to complete the method with options
-// try {
-// const options = {
-//   weekday: "short",
-//   day: "numeric",
-//   month: "short",
-// };
-// console.log(dateObj);
-// let date1 = `${dateObj.toLocaleDateString("en-US", options)}`;
-// console.log(date1);
-// date1.innerHTML = `${new Date().toLocaleDateString("en-US", options)}`;
-// } catch (e) {
-// 	console.log("Error with code or your browser does not support Locale");
-// }
-
 //-------------------Navigational bar--------------//
 function toggleMenu() {
   document.getElementById("primaryNav").classList.toggle("open");
@@ -91,63 +71,44 @@ function displayResultsforecast(weatherData) {
     month: "short",
   };
   let t = weatherData.list[8].main.temp.toFixed(0);
-  let firstday = new Date(weatherData.list[8].dt);
-  console.log(firstday);
-  forecast1.innerHTML = `${firstday.toLocaleDateString(
-    "en-US",
-    options
-  )} ${t}˚ `;
-
+  forecast1.textContent = `Tomorrow: ${t}˚`;
   let t2 = weatherData.list[16].main.temp.toFixed(0);
-  let secondDay = new Date(weatherData.list[16].dt);
-  console.log(secondDay);
-  forecast2.innerHTML = `${secondDay.toLocaleDateString(
-    "en-US",
-    options
-  )} ${t2}˚ `;
-
+  forecast2.innerHTML = `After tomorrow: ${t2}˚`;
   let t3 = weatherData.list[24].main.temp.toFixed(0);
-  let thirdDay = new Date(weatherData.list[24].dt);
-  console.log(thirdDay);
-  forecast3.innerHTML = `${thirdDay.toLocaleDateString(
-    "en-US",
-    options
-  )} ${t3}˚ `;
+  forecast3.textContent = `In three days: ${t3}˚`;
 }
 
 //-------------------------fresh.html--------------------//
 
 const urlFruits = "https://brotherblazzard.github.io/canvas-content/fruit.json";
 
-const selectFruit = document.querySelector("select");
+const selectFruit1 = document.querySelector("#fruit1");
+const selectFruit2 = document.querySelector("#fruit2");
+const selectFruit3 = document.querySelector("#fruit3");
 
 async function getFruitData() {
   const response = await fetch(urlFruits);
   const data = await response.json();
-  displaySelectFruit(data);
-  // I added an new argument to this function displayCompanies to pass cards element.
-  // console.table(data.companies);
-  // note that we reference the prophet array of the data object given the structure of the json file
+  displaySelectFruit(data, selectFruit1);
+  displaySelectFruit(data, selectFruit2);
+  displaySelectFruit(data, selectFruit3);
 }
 
 getFruitData();
 
-const displaySelectFruit = (fruits) => {
-  // const cards = document.querySelector("article");
-  // select the output container element
-
+const displaySelectFruit = (fruits, selectElement) => {
   fruits.forEach((fruit) => {
-    // Create elements to add to the div.cards element
+    // Create element option to add to the select element
     let option = document.createElement("option");
     
-    // Build the name content out to show the companies'  name - finish the template string
+    // Build name content to show fruit's name 
     option.textContent = `${fruit.name}`;
 
-    // Build the image by setting all the relevant attributes
+    // Set attribute value with fruit name
     option.setAttribute("value", fruit.name);
 
-    // Append the section(card) with the created elements
-    selectFruit.appendChild(option);
+    // Append select element with the created option
+    selectElement.appendChild(option);
   });
   // end of forEach loop
 };
